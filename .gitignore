@@ -1,0 +1,7 @@
+node_modules/
+dist/
+*.tsbuildinfo
+
+# LoopFlow runtime artifacts in this repo (when dogfooding)
+.loopflow/worktrees/
+.loopflow/reports/

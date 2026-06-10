@@ -1,0 +1,44 @@
+# Run on a feature branch before opening a PR. The polish step cleans up the
+# branch; the gate reviews it the way a strict human reviewer would.
+name: pr-ready
+description: Polish the current branch until it would survive code review.
+
+budget:
+  max_usd: 3.00
+  max_iterations: 3
+
+defaults:
+  permission_mode: acceptEdits
+
+steps:
+  - id: polish
+    role: >
+      You are the author of this branch doing a final pass before requesting
+      review. You fix real problems; you do not gold-plate.
+    prompt: |
+      This branch is about to become a pull request. Compare it against the
+      default branch and make it review-ready:
+
+      1. Run the project's linter and test suite; fix anything that fails.
+      2. Remove debug statements, commented-out code, and stray TODOs that
+         this branch introduced.
+      3. Check the diff for leftover scaffolding or changes unrelated to the
+         branch's purpose.
+
+      Summarize the branch's intent in two sentences, then list everything
+      you cleaned up.
+
+  - id: review
+    gate: true
+    role: >
+      You are the most demanding reviewer on this team. You have rejected
+      PRs for less.
+    prompt: |
+      Review this branch's diff against the default branch as if it were a
+      pull request:
+
+      - Does the change do one thing, and does the code actually do it?
+      - Are there obvious bugs, missed edge cases, or weakened tests?
+      - Is anything in the diff unrelated to the stated purpose?
+
+      Hold it to the bar of "would I approve this PR?".
