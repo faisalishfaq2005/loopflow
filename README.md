@@ -4,6 +4,18 @@
  <img src="https://github.com/user-attachments/assets/0e6a9a11-2c92-499d-9e59-476e920c1b06" alt="loopflow logo" width="250" />
   
 </p>
+
+
+<p align="center">
+    <a href="https://www.npmjs.com/package/@loopflow/cli">
+        <img alt="npm" src="https://img.shields.io/npm/v/@loopflow/cli">
+    </a>
+    <a href="https://github.com/faisalishfaq2005/loopflow/blob/main/LICENSE">
+        <img alt="License" src="https://img.shields.io/badge/License-MIT-yellow.svg">
+    </a>
+</p>
+
+
   
 
 # LoopFlow
