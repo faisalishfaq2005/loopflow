@@ -136,11 +136,16 @@ steps:
 - On FAIL, the loop starts over with the reviewer's feedback injected into every prompt.
 - Every run appends a record to `.loopflow/memory/<loop>.md` — outcome, cost, and the final summary — which the next run reads.
 
-Here's what that looks like in a real run — a release-check loop catching a debug artifact the fix step missed:
+### Here's what that looks like in a real run — a release-check loop catching a debug artifact the fix step missed:
 
-  ![Loop retries after gate rejects iteration 1](<img width="1145" height="195" alt="Screenshot 2026-06-21 010505" src="https://github.com/user-attachments/assets/67dc7ceb-7e3a-4037-ab62-4b0e9c26cbca" />)
-  ![Gate passes all tests but catches a leftover console.log — feedback injected into the next  iteration](<img width="3825" height="657" alt="Screenshot 2026-06-21 010637" src="https://github.com/user-attachments/assets/b7c247d4-ce99-4f95-9fea-eca0eab7b4bf" />)
-  ![Gate confirms the artifact is gone — VERDICT: PASS, 3 iterations, $0.61](<img width="1970" height="225" alt="Screenshot 2026-06-21 010732" src="https://github.com/user-attachments/assets/af37322b-da17-4d70-ac91-9a0c7b6dbda9" />)
+<img width="1145" alt="Loop retries after gate rejects iteration 1"
+src="https://github.com/user-attachments/assets/67dc7ceb-7e3a-4037-ab62-4b0e9c26cbca">
+
+<img width="1200" alt="Gate passes all tests but catches a leftover console.log — feedback injected into the next iteration"
+src="https://github.com/user-attachments/assets/b7c247d4-ce99-4f95-9fea-eca0eab7b4bf">
+
+<img width="1200" alt="Gate confirms the artifact is gone — VERDICT: PASS, 3 iterations, $0.61"
+src="https://github.com/user-attachments/assets/af37322b-da17-4d70-ac91-9a0c7b6dbda9">
 
 ## The starter loops
 
