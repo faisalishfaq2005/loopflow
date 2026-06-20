@@ -11,7 +11,19 @@
     "orchestration",
     "cli"
   ],
+  "author": "Muhammad Faisal Ishfaq",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/faisalishfaq2005/loopflow.git"
+  },
+  "homepage": "https://github.com/faisalishfaq2005/loopflow#readme",
+  "bugs": {
+    "url": "https://github.com/faisalishfaq2005/loopflow/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
   "type": "module",
   "bin": {
     "loopflow": "dist/cli.js"
