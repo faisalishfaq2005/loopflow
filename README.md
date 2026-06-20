@@ -31,11 +31,17 @@ Iteration 2/3
 
 ✓ success · 2 iteration(s) · $0.82
 ```
+## 📺 Demo video
 
-## 📺 **Demo video**
-![LoopFlow demo — release-check loop, 3 iterations](assets/8be10c47-b7fb-4252-982b-ee1a5dca725c)
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/8be10c47-b7fb-4252-982b-ee1a5dca725c"
+       width="800"
+       alt="LoopFlow demo — release-check loop, 2 iterations">
+</p>
 
-
+<p align="center">
+  <em>LoopFlow demo — release-check loop, 2 iterations</em>
+</p>
 
 ---
 
