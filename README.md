@@ -33,7 +33,7 @@ Iteration 2/3
 ```
 
 > 📺 **Demo video**
-> <img width="400" height="225" alt="loopved" src="https://github.com/user-attachments/assets/c15eaac4-558e-4379-ba48-bef0578fa9b1" />
+> <img width="800" height="600" alt="loopved" src="https://github.com/user-attachments/assets/c15eaac4-558e-4379-ba48-bef0578fa9b1" />
 
 
 ---
