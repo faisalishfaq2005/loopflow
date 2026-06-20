@@ -6,7 +6,6 @@
 </p>
 
 
-```html
 <p align="center">
     <a href="https://www.npmjs.com/package/@loopflow/cli">
         <img alt="npm" src="https://img.shields.io/npm/v/@loopflow/cli?color=cb3837">
@@ -15,7 +14,6 @@
         <img alt="License" src="https://img.shields.io/badge/License-MIT-blue.svg">
     </a>
 </p>
-```
 
 
 
