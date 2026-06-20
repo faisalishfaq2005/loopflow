@@ -1,5 +1,12 @@
 # LoopFlow
 
+<p align="center">
+  <img
+    <img width="500" height="500" alt="logo" src="https://github.com/user-attachments/assets/02e04e22-54bd-4cfe-8f4a-694d801ec11f" />
+  />
+</p>
+
+
 **Stop prompting your coding agent. Design the loop that prompts it.**
 
 LoopFlow turns Claude Code into a system that runs itself: you declare a goal, a pipeline of agents, and a verification gate in one YAML file — LoopFlow iterates until the gate passes, the budget runs out, or the attempt limit is hit. One agent writes, a *different* agent checks, and a memory file makes every run smarter than the last.
