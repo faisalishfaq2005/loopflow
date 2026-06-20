@@ -32,8 +32,9 @@ Iteration 2/3
 ✓ success · 2 iteration(s) · $0.82
 ```
 
-> 📺 **Demo video**
-> <img width="800" height="450" alt="loopved-ezgif com-optimize" src="https://github.com/user-attachments/assets/8be10c47-b7fb-4252-982b-ee1a5dca725c" />
+## 📺 **Demo video**
+![LoopFlow demo — release-check loop, 3 iterations](assets/8be10c47-b7fb-4252-982b-ee1a5dca725c)
+
 
 
 ---
