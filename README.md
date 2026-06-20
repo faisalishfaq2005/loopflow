@@ -32,7 +32,9 @@ Iteration 2/3
 ✓ success · 2 iteration(s) · $0.82
 ```
 
-> 📺 **Demo video coming here.** *(maintainer note: record `loopflow run test-and-fix` on a repo with a real failing test)*
+> 📺 **Demo video**
+> <img width="400" height="225" alt="loopved" src="https://github.com/user-attachments/assets/c15eaac4-558e-4379-ba48-bef0578fa9b1" />
+
 
 ---
 
