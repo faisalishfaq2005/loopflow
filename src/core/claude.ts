@@ -45,7 +45,7 @@ const CLAUDE_BIN = process.env.LOOPFLOW_CLAUDE_BIN ?? "claude";
  * line limit and create quoting hazards.
  */
 export async function runClaude(inv: ClaudeInvocation): Promise<ClaudeResult> {
-  const args = ["-p", "--output-format", "stream-json"];
+  const args = ["-p", "--verbose", "--output-format", "stream-json"];
   if (inv.model) args.push("--model", inv.model);
   if (inv.permissionMode) args.push("--permission-mode", inv.permissionMode);
   if (inv.maxBudgetUsd !== undefined) {
