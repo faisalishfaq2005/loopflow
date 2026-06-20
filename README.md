@@ -6,14 +6,17 @@
 </p>
 
 
+```html
 <p align="center">
     <a href="https://www.npmjs.com/package/@loopflow/cli">
-        <img alt="npm" src="https://img.shields.io/npm/v/@loopflow/cli">
+        <img alt="npm" src="https://img.shields.io/npm/v/@loopflow/cli?color=cb3837">
     </a>
     <a href="https://github.com/faisalishfaq2005/loopflow/blob/main/LICENSE">
-        <img alt="License" src="https://img.shields.io/badge/License-MIT-yellow.svg">
+        <img alt="License" src="https://img.shields.io/badge/License-MIT-blue.svg">
     </a>
 </p>
+```
+
 
 
   
