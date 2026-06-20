@@ -1,10 +1,10 @@
 # LoopFlow
 
-<p align="center">
+
   
-    <img width="500" height="500" alt="logo" src="https://github.com/user-attachments/assets/02e04e22-54bd-4cfe-8f4a-694d801ec11f" />
+  <img width="500" height="500" alt="logo" src="https://github.com/user-attachments/assets/02e04e22-54bd-4cfe-8f4a-694d801ec11f" />
   
-</p>
+
 
 
 **Stop prompting your coding agent. Design the loop that prompts it.**
