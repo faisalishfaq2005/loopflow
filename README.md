@@ -5,10 +5,12 @@
   
 </p>
 
-
 <p align="center">
     <a href="https://www.npmjs.com/package/@loopflow/cli">
         <img alt="npm" src="https://img.shields.io/npm/v/@loopflow/cli?color=cb3837">
+    </a>
+    <a href="https://github.com/faisalishfaq2005/loopflow/stargazers">
+        <img alt="GitHub stars" src="https://img.shields.io/github/stars/faisalishfaq2005/loopflow?style=social">
     </a>
     <a href="https://github.com/faisalishfaq2005/loopflow/blob/main/LICENSE">
         <img alt="License" src="https://img.shields.io/badge/License-MIT-blue.svg">
