@@ -118,8 +118,11 @@ function reporter(options: RunCommandOptions): RunnerEvents {
           ? pc.red("gate FAIL")
           : pc.green("done")
         : pc.red("ERROR");
+      const duration = typeof run.durationMs === 'number' && run.durationMs > 0
+        ? ` · ${pc.dim(`${(run.durationMs / 1000).toFixed(1)}s`)}`
+        : '';
       const resume = run.sessionId ? pc.dim(` · resume: claude --resume ${run.sessionId}`) : "";
-      console.log(`  ${icon} ${status} · ${pc.dim(`$${run.costUsd.toFixed(2)}`)}${resume}`);
+      console.log(`  ${icon} ${status} · ${pc.dim(`$${run.costUsd.toFixed(2)}`)}${duration}${resume}`);
     },
 
     onGateFail(_stepId: string, feedback: string) {
