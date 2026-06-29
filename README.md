@@ -10,6 +10,9 @@
     <a href="https://www.npmjs.com/package/@loopflow/cli">
         <img alt="npm" src="https://img.shields.io/npm/v/@loopflow/cli?color=cb3837">
     </a>
+    <a href="https://github.com/faisalishfaq2005/loopflow/actions/workflows/ci.yml">
+        <img alt="CI" src="https://github.com/faisalishfaq2005/loopflow/actions/workflows/ci.yml/badge.svg">
+    </a>
     <a href="https://github.com/faisalishfaq2005/loopflow/stargazers">
         <img alt="GitHub stars" src="https://img.shields.io/github/stars/faisalishfaq2005/loopflow?style=social">
     </a>
