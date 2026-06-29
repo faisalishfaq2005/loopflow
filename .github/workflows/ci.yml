@@ -6,7 +6,8 @@ jobs:
   test:
     runs-on: ubuntu-latest
     strategy:
-      matrix: { node: [18, 20, 22] }
+      # Vitest 4 (via rolldown) requires Node's util.styleText, added in Node 20.
+      matrix: { node: [20, 22] }
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
