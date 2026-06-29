@@ -189,7 +189,7 @@ schtasks /create /tn "debt-audit" /sc weekly /d MON /st 09:00 ^
   /tr "cmd /c cd /d C:\path\to\project && loopflow run debt-audit"
 ```
 
-CI works too — a GitHub Action that runs `loopflow run docs-sync` weekly and opens a PR from the kept worktree branch is ~20 lines.
+CI works too — a GitHub Action that runs `loopflow run docs-sync` weekly and opens a PR from the kept worktree branch is ~20 lines. Copy [`examples/github-action-docs-sync.yml`](examples/github-action-docs-sync.yml) into your project to get started.
 
 ## Staying the engineer
 

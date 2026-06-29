@@ -1,0 +1,58 @@
+# Example: run a LoopFlow loop on a schedule and open a PR with the results.
+#
+# Copy this into YOUR project at:
+#   .github/workflows/loopflow-docs-sync.yml
+#
+# It runs the `docs-sync` loop every Monday, and if the loop leaves changes
+# behind, opens a pull request for a human to review. Nothing is merged
+# automatically — the loop proposes, you dispose.
+#
+# Prerequisites in your repo:
+#   1. `loopflow init` has been run and `.loopflow/loops/docs-sync.yaml` exists.
+#   2. A repo secret holding your Claude credentials (see the auth note below).
+
+name: Weekly docs-sync
+on:
+  schedule:
+    - cron: "0 9 * * 1"    # Mondays at 09:00 UTC — adjust to taste
+  workflow_dispatch: {}     # also lets you trigger it by hand from the Actions tab
+
+jobs:
+  docs-sync:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write        # allow pushing the loop's branch
+      pull-requests: write   # allow opening the PR
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      # LoopFlow drives Claude Code, so both must be installed.
+      - run: npm install -g @loopflow/cli @anthropic-ai/claude-code
+
+      # AUTH NOTE: Claude Code must be authenticated in CI. The simplest path
+      # is an API key exposed as ANTHROPIC_API_KEY. If your setup uses a
+      # different auth method (OAuth token, Bedrock, Vertex), swap this for the
+      # matching environment variables — "if `claude` works, `loopflow` works."
+      - name: Run the docs-sync loop
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: loopflow run docs-sync
+
+      # The docs-sync loop uses `worktree: true`, so when it makes changes it
+      # leaves them on a branch. create-pull-request picks up any working-tree
+      # changes and opens (or updates) a single PR.
+      - name: Open a PR if the loop made changes
+        uses: peter-evans/create-pull-request@v6
+        with:
+          branch: loopflow/docs-sync
+          title: "docs-sync: loop-proposed documentation fixes"
+          commit-message: "docs: sync docs with code (loopflow)"
+          body: |
+            Automated by the LoopFlow `docs-sync` loop.
+
+            A separate agent verified these changes against the source, but
+            **review before merging** — the loop proposes, you dispose.
