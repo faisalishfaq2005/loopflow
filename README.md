@@ -1,7 +1,8 @@
 
 <p align="center">
   
- <img src="https://github.com/user-attachments/assets/0e6a9a11-2c92-499d-9e59-476e920c1b06" alt="loopflow logo" width="250" />
+<img width="1983" height="793" alt="ChatGPT Image Jun 29, 2026, 05_55_12 PM" src="https://github.com/user-attachments/assets/ee9ad956-8256-479f-adf0-882b3c7937e2" />
+
   
 </p>
 
