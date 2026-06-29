@@ -1,0 +1,55 @@
+name: Loop contribution (cookbook)
+description: Share a loop that solved a real problem for you.
+title: "[loop]: "
+labels: ["loop", "good first issue"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        The most valuable contribution to LoopFlow is a loop that solved a real
+        problem. Use this to propose one — or open a PR directly per
+        [CONTRIBUTING.md](../blob/main/CONTRIBUTING.md). Loops with a
+        verification gate are strongly preferred.
+  - type: input
+    id: loop-name
+    attributes:
+      label: Loop name
+      description: kebab-case; will become loops/<name>.yaml
+      placeholder: changelog-sync
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem does it solve?
+      placeholder: Keeps CHANGELOG.md in sync with merged PRs before a release.
+    validations:
+      required: true
+  - type: textarea
+    id: loop-yaml
+    attributes:
+      label: The loop YAML
+      render: yaml
+    validations:
+      required: true
+  - type: input
+    id: cost
+    attributes:
+      label: Roughly what does one run cost (USD)?
+      placeholder: "~$0.40"
+    validations:
+      required: false
+  - type: textarea
+    id: tuning
+    attributes:
+      label: Anything you learned tuning the prompts?
+    validations:
+      required: false
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checklist
+      options:
+        - label: It has a verification gate (or I explain why it doesn't).
+        - label: I removed anything specific to my project (paths, tool names, jargon).
+        - label: It passes `loopflow validate`.
