@@ -1,0 +1,69 @@
+name: Bug report
+description: Something in LoopFlow didn't work as expected.
+title: "[bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to file a bug. The single most useful thing
+        you can include is the `claude --resume <session-id>` transcript of the
+        step that misbehaved — every step prints its session id.
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: What did you expect, and what happened instead?
+      placeholder: I ran `loopflow run test-and-fix` and …
+    validations:
+      required: true
+  - type: textarea
+    id: command
+    attributes:
+      label: Command you ran
+      render: shell
+      placeholder: loopflow run test-and-fix --verbose
+    validations:
+      required: true
+  - type: textarea
+    id: loop-yaml
+    attributes:
+      label: Loop YAML
+      description: The loop definition you ran (redact anything sensitive).
+      render: yaml
+    validations:
+      required: false
+  - type: input
+    id: os
+    attributes:
+      label: OS
+      placeholder: "Windows 11 / macOS 14 / Ubuntu 22.04"
+    validations:
+      required: true
+  - type: input
+    id: node-version
+    attributes:
+      label: Node version
+      description: Output of `node --version`.
+      placeholder: v20.11.0
+    validations:
+      required: true
+  - type: input
+    id: claude-version
+    attributes:
+      label: Claude Code version
+      description: Output of `claude --version`.
+      placeholder: 1.0.0
+    validations:
+      required: true
+  - type: textarea
+    id: transcript
+    attributes:
+      label: Session transcript / logs
+      description: >
+        If a step behaved strangely, paste the relevant part of its
+        `claude --resume <session-id>` transcript, or run with `--verbose`
+        and paste the output.
+      render: shell
+    validations:
+      required: false

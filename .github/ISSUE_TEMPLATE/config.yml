@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Question or help
+    url: https://github.com/faisalishfaq2005/loopflow/discussions/categories/q-a
+    about: Ask how to use LoopFlow, scheduling, prompt tuning — anything that isn't a bug.
+  - name: Share a loop (Show & Tell)
+    url: https://github.com/faisalishfaq2005/loopflow/discussions/categories/show-and-tell
+    about: Post a loop that worked for you — the cookbook starts here.
+  - name: Ideas & roadmap
+    url: https://github.com/faisalishfaq2005/loopflow/discussions/categories/ideas
+    about: Discuss larger design ideas before they become issues.

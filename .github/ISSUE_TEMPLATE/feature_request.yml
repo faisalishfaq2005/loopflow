@@ -1,0 +1,38 @@
+name: Feature request
+description: Suggest a new capability or improvement.
+title: "[feature]: "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        LoopFlow is deliberately a thin orchestrator around `claude -p`.
+        Before proposing engine code, consider whether the idea could be a
+        **loop** instead — features that can be a loop should be a loop.
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem would this solve?
+      description: Describe the situation that's painful today.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+      description: What should LoopFlow do? A CLI sketch or example YAML helps.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+    validations:
+      required: false
+  - type: checkboxes
+    id: scope
+    attributes:
+      label: Scope
+      options:
+        - label: I've checked this isn't already on the roadmap in the README.
+        - label: This can't reasonably be expressed as a loop instead of engine code.
