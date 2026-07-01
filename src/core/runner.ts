@@ -16,7 +16,7 @@ export interface StepRun {
   gatePassed?: boolean;
   costUsd: number;
   sessionId: string | undefined;
-  durationMs?: number;  
+  durationMs?: number;
 }
 
 export interface RunResult {
@@ -129,7 +129,7 @@ export async function runLoop(loop: LoopConfig, options: RunOptions): Promise<Ru
         ok: result.ok,
         costUsd: result.costUsd,
         sessionId: result.sessionId,
-        durationMs: result.durationMs,  
+        durationMs: result.durationMs,
       };
 
       if (!result.ok) {
